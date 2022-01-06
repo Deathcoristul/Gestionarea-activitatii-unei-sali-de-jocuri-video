@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Achitare" directorySegmentName="seg_0" id="2053FC8C-48E3-632E-E2E2-DE5961108715">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_sesiune" id="68D13AAE-C50A-E8E0-9F9F-0EEC95CEB63E">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Data_achitarii" id="7521F6BE-526B-F2CB-0EFE-941A66DA0BDE">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nr_card" id="8F663C45-3F23-E39C-1339-CCBBEB906030">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Nr_bon" id="A541D561-EEF9-C41A-C960-72AF66CDDE65">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="Data_finalizare" id="D23E5AF5-3EF6-571F-3A29-DE29848036D0">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Pret" id="FE8BAC49-BA94-FDA4-8DAC-D2683DCBF2CC">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Achitare_Jucator_FK" id="03140A2F-0392-A505-69ED-9701D8FDB911">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Achitare_Sesiune_gaming_FK" id="8012A024-D9E6-2AB0-7621-9C44D3179BE1">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Achitare_PK" id="20B6A3A8-8B35-831F-EE1D-2F2BE0FE71FE">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

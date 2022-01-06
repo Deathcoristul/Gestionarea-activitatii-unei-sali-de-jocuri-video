@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="SalaGaming" id="9ECC7A79-0FF2-3FFE-C573-344A1ABC9E4B" version="3.5">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 19:44:40 UTC</createdTime>
+<ownerDesignName>MagazinIT</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>9ECC7A79-0FF2-3FFE-C573-344A1ABC9E4B</designId>
+</OSDM_Design>

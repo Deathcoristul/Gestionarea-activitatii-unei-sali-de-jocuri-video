@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="66C08243-AA9B-D058-53F8-8CEDE0CB2933" containerWithKeyObject="2053FC8C-48E3-632E-E2E2-DE5961108715" localFKIndex="8E3499B7-C914-B9F0-338D-63384B46A88F" name="Achitare_Sesiune_gaming_FK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-28 09:59:26 UTC</createdTime>
+<generatorID>002AF7C0-3BA2-91AE-A217-FB4FEFF2FFD1</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<referredTableLongName>Sesiune_gaming</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9668122A-512A-8A16-FC48-DDC6C7A2E629</referredTableID>
+<keyObject>B4E8B21D-05F3-429C-4266-9B7520B3EDE5</keyObject>
+<referredKeyID>B4E8B21D-05F3-429C-4266-9B7520B3EDE5</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_sesiune</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

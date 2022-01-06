@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="50E82AE5-030A-4FD0-A133-EE88C10C48C7" name="Sesiune gaming">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 19:56:16 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Denumire joc" id="8B6682DE-4FDD-6E6C-45F8-6F2E251CAA8D">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 19:56:44 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID sesiune" id="9CA75F49-D7A8-24E6-711B-648CDEEE0A37">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 19:57:05 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID tip" id="CB37515A-32E9-F2CB-2BA9-8A4DD3BC1559">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-24 17:05:09 UTC</createdTime>
+<generatorID>BCD3E350-BDA3-EEFA-E8AC-20B48C7CD99B</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<referedAttribute>8D8E6D82-CA54-ED95-DB6B-60904753B99F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4DAE9D51-819D-189B-8E17-876958B3EFA1" name="Sesiune_gaming_PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 19:59:17 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9CA75F49-D7A8-24E6-711B-648CDEEE0A37</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

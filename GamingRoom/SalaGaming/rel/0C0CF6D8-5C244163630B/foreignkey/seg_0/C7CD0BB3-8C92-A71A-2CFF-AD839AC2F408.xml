@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C7CD0BB3-8C92-A71A-2CFF-AD839AC2F408" containerWithKeyObject="2053FC8C-48E3-632E-E2E2-DE5961108715" localFKIndex="03140A2F-0392-A505-69ED-9701D8FDB911" name="Achitare_Jucator_FK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-24 17:33:48 UTC</createdTime>
+<generatorID>002AF7C0-3BA2-91AE-A217-FB4FEFF2FFD1</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<referredTableLongName>Jucator</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>06909ED1-3237-8C73-750F-6A7D27158201</referredTableID>
+<keyObject>ED4AD83C-7537-13D9-1ADC-638D84630963</keyObject>
+<referredKeyID>ED4AD83C-7537-13D9-1ADC-638D84630963</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Nr_card</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

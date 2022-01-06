@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F56FDF59-84CB-9F24-079C-B37C90F1553F" name="Jucator">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-21 14:35:59 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nume" id="E1EB508A-589D-B765-197A-45E21E6B3559">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-21 14:36:09 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<constraintName>nume_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="INSTR(Nume,&apos;0&apos;)=0 AND INSTR(Nume,&apos;1&apos;)=0 AND INSTR(Nume,&apos;2&apos;)=0 AND INSTR(Nume,&apos;3&apos;)=0 AND INSTR(Nume,&apos;4&apos;)=0 AND INSTR(Nume,&apos;5&apos;)=0 AND INSTR(Nume,&apos;6&apos;)=0 AND INSTR(Nume,&apos;7&apos;)=0 AND INSTR(Nume,&apos;8&apos;)=0 AND INSTR(Nume,&apos;9&apos;)=0 AND length(Nume)&gt;1"/>
+</checkConstraint>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nr card" id="146F6638-61BB-DBDE-5614-6B9FFACAC495">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-21 14:36:25 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<ownDataTypeParameters>,12,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nume echipa" id="8D28B0FC-4A42-84C1-EEAC-3E4961D143DF">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-21 14:38:13 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="368EA95D-5DB5-6475-47CE-30EB931F588B" name="Jucator PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-21 14:38:26 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>146F6638-61BB-DBDE-5614-6B9FFACAC495</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Tip_Joc" directorySegmentName="seg_0" id="B5275FD0-01B9-E3D5-09D5-5415ADAEE15A">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_tip" id="421537C5-204E-1085-1EEF-DAC96B63743C">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Denumire_tip" id="986F697A-BD61-8B2A-B670-7FF5C59F25F2">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Tip_Joc_PK" id="9FADD902-D8B9-2E43-DC00-F30FED13BB9D">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-29 15:53:52 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

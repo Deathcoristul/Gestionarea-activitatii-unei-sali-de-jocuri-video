@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2053FC8C-48E3-632E-E2E2-DE5961108715" name="Achitare">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-24 17:33:48 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<ordsAlias>sesiune_gamingv1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Nr_card" id="8F663C45-3F23-E39C-1339-CCBBEB906030">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-24 17:33:48 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C7CD0BB3-8C92-A71A-2CFF-AD839AC2F408" referredColumn="6108921E-8E4B-140F-8A69-4A8A6AB5BEAC"/>
+</associations>
+</Column>
+<Column name="ID_sesiune" id="4BB42F1E-512F-8E31-6394-E535CABD2949">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-28 09:59:26 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="66C08243-AA9B-D058-53F8-8CEDE0CB2933" referredColumn="3F9B0068-3AFA-F3A0-B94D-C2E620161690"/>
+</associations>
+</Column>
+<Column name="Data_achitarii" id="7521F6BE-526B-F2CB-0EFE-941A66DA0BDE">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-24 17:36:41 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nr_bon" id="A541D561-EEF9-C41A-C960-72AF66CDDE65">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-24 17:41:21 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>30</dataTypePrecision>
+<ownDataTypeParameters>,30,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementStartWith>100</autoIncrementStartWith>
+<autoIncrementIncrementBy>100</autoIncrementIncrementBy>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Pret" id="FE8BAC49-BA94-FDA4-8DAC-D2683DCBF2CC">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-26 12:17:40 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<constraintName>Pret_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<listOfValues>
+<valueDef value="10" description=""/>
+<valueDef value="5" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="Data_finalizare" id="D23E5AF5-3EF6-571F-3A29-DE29848036D0">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-26 12:17:40 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<constraintName>finish_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="Data_finalizare=Data_achitarii+Pret/120"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="20B6A3A8-8B35-831F-EE1D-2F2BE0FE71FE" name="Achitare_PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-24 17:33:48 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F663C45-3F23-E39C-1339-CCBBEB906030"/>
+<colUsage columnID="A541D561-EEF9-C41A-C960-72AF66CDDE65"/>
+<colUsage columnID="7521F6BE-526B-F2CB-0EFE-941A66DA0BDE"/>
+<colUsage columnID="4BB42F1E-512F-8E31-6394-E535CABD2949"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="03140A2F-0392-A505-69ED-9701D8FDB911" name="Achitare_Jucator_FK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-24 17:33:48 UTC</createdTime>
+<generatorID>002AF7C0-3BA2-91AE-A217-FB4FEFF2FFD1</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F663C45-3F23-E39C-1339-CCBBEB906030"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8E3499B7-C914-B9F0-338D-63384B46A88F" name="Achitare_Sesiune_gaming_FK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-28 09:59:26 UTC</createdTime>
+<generatorID>002AF7C0-3BA2-91AE-A217-FB4FEFF2FFD1</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BB42F1E-512F-8E31-6394-E535CABD2949"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

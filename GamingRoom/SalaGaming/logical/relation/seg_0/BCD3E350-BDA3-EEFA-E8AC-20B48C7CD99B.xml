@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Sesiune gaming Tip Joc FK" directorySegmentName="seg_0" id="BCD3E350-BDA3-EEFA-E8AC-20B48C7CD99B">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-21 14:02:30 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<sourcePk>4FCA27AB-7A30-74CC-0B61-0B291EB296FA</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>are mai multe jocuri din sesiuni</nameOnSource>
+<nameOnTarget>au jocul de tipul</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6A642AEB-B1E2-B513-A1F7-2F2FECDE9265</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>50E82AE5-030A-4FD0-A133-EE88C10C48C7</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

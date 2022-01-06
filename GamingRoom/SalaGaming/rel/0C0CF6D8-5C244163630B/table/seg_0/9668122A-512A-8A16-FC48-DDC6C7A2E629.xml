@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9668122A-512A-8A16-FC48-DDC6C7A2E629" name="Sesiune_gaming">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-28 09:59:26 UTC</createdTime>
+<generatorID>50E82AE5-030A-4FD0-A133-EE88C10C48C7</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Denumire_joc" id="A1902531-1BE2-8579-02BC-E614EB46A4D2">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-28 09:59:26 UTC</createdTime>
+<generatorID>8B6682DE-4FDD-6E6C-45F8-6F2E251CAA8D</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_sesiune" id="3F9B0068-3AFA-F3A0-B94D-C2E620161690">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-28 09:59:26 UTC</createdTime>
+<generatorID>9CA75F49-D7A8-24E6-711B-648CDEEE0A37</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_tip" id="152D5430-032E-1387-4552-91C27DF0A6AA">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-28 09:59:26 UTC</createdTime>
+<generatorID>CB37515A-32E9-F2CB-2BA9-8A4DD3BC1559</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B15E9B0-6EF4-2081-76A7-F0C2B3C39BD0" referredColumn="421537C5-204E-1085-1EEF-DAC96B63743C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B4E8B21D-05F3-429C-4266-9B7520B3EDE5" name="Sesiune_gaming_PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-28 09:59:26 UTC</createdTime>
+<generatorID>4DAE9D51-819D-189B-8E17-876958B3EFA1</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F9B0068-3AFA-F3A0-B94D-C2E620161690"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8162C22B-48D8-BE08-3213-66B1679D83A2" name="Sesiune_gaming_Tip_Joc_FK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-28 09:59:26 UTC</createdTime>
+<generatorID>BCD3E350-BDA3-EEFA-E8AC-20B48C7CD99B</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="152D5430-032E-1387-4552-91C27DF0A6AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

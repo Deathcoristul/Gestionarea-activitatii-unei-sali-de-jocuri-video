@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6A642AEB-B1E2-B513-A1F7-2F2FECDE9265" name="Tip Joc">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 20:01:22 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Denumire tip" id="598072E7-39DC-C7B1-94B6-331CA91DF681">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 20:01:39 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID tip" id="8D8E6D82-CA54-ED95-DB6B-60904753B99F">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 20:01:58 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4FCA27AB-7A30-74CC-0B61-0B291EB296FA" name="Tip_Joc_PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-24 17:05:08 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8D8E6D82-CA54-ED95-DB6B-60904753B99F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

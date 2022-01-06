@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1200.0" style="-fx-background-color: &quot;1b00ff&quot;;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamingroom.Controller">
+   <children>
+      <TabPane fx:id="tabPane" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: &quot;GREEN&quot;;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabJucator" onSelectionChanged="#JucatorTabSelected" text="Jucător">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabelJucator" prefHeight="900.0" prefWidth="1200.0">
+                          <columns>
+                            <TableColumn fx:id="Jucator_nume" minWidth="100.0" prefWidth="407.9999877810478" text="Nume" />
+                            <TableColumn fx:id="Jucator_numar_card" prefWidth="442.0" text="Număr card" />
+                              <TableColumn fx:id="Jucator_nume_echipa" prefWidth="350.79998779296875" text="Nume echipă" />
+                          </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#OnAdd" text="Adaugă jucător" />
+                                        <MenuItem mnemonicParsing="false" onAction="#OnEdit" text="Modifică jucătorul" />
+                                        <MenuItem mnemonicParsing="false" onAction="#OnDelete" text="Șterge jucătorul" />
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabDetails" onSelectionChanged="#DetailsTabSelected" text="Detalii Jucător">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabelDetails" prefHeight="900.0" prefWidth="1200.0">
+                          <columns>
+                            <TableColumn fx:id="Detalii_numar_card" prefWidth="440.59999084472656" text="Număr card" />
+                            <TableColumn fx:id="Detalii_email" minWidth="0.0" prefWidth="488.1999816894531" text="Adresă de e-mail" />
+                              <TableColumn fx:id="Detalii_birth" prefWidth="212.800048828125" text="Data nașterii" />
+                              <TableColumn fx:id="Detalii_gen" prefWidth="61.2000732421875" text="Gen" />
+                          </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#OnAdd" text="Adaugă detalii " />
+                                        <MenuItem mnemonicParsing="false" onAction="#OnEdit" text="Modifică detaliile " />
+                                        <MenuItem mnemonicParsing="false" onAction="#OnDelete" text="Șterge detaliile" />
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabTipuri" onSelectionChanged="#TipuriTabSelected" text="Tipuri de Joc">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabelTipuri" prefHeight="900.0" prefWidth="1200.0">
+                          <columns>
+                            <TableColumn fx:id="Tip_denumire" prefWidth="1017.7999877929688" text="Denumire Tip de Joc" />
+                            <TableColumn fx:id="Tip_id" prefWidth="182.2000732421875" text="ID" />
+                          </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#OnAdd" text="Adaugă tip" />
+                                        <MenuItem mnemonicParsing="false" onAction="#OnEdit" text="Modifică tipul" />
+                                        <MenuItem mnemonicParsing="false" onAction="#OnDelete" text="Șterge tipul" />
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                     </children></AnchorPane>
+                </content>
+            </Tab>
+            <Tab fx:id="tabSesiuni" onSelectionChanged="#SesiuniTabSelected" text="Sesiuni de Jocuri">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabelSesiuni" prefHeight="900.0" prefWidth="1200.0">
+                          <columns>
+                            <TableColumn fx:id="Sesiune_numejoc" prefWidth="572.200003027916" text="Numele Jocului" />
+                            <TableColumn fx:id="Sesiune_id" prefWidth="447.0" text="ID sesiune" />
+                              <TableColumn fx:id="Sesiune_id_tip" prefWidth="181.5999755859375" text="ID tip de joc" />
+                          </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#OnAdd" text="Adaugă sesiune" />
+                                        <MenuItem mnemonicParsing="false" onAction="#OnEdit" text="Modifică sesiunea" />
+                                        <MenuItem mnemonicParsing="false" onAction="#OnDelete" text="Șterge sesiunea" />
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                     </children></AnchorPane>
+                </content>
+            </Tab>
+            <Tab fx:id="tabAchitari" onSelectionChanged="#AchitariTabSelected" text="Achitări">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabelAchitari" prefHeight="900.0" prefWidth="1200.0">
+                          <columns>
+                              <TableColumn fx:id="Achitare_nr_card" prefWidth="184.6000091433525" text="Număr card" />
+                            <TableColumn fx:id="Achitare_sesiune" minWidth="0.0" prefWidth="139.0" text="ID sesiune" />
+                            <TableColumn fx:id="Achitare_data_achitarii" prefWidth="308.1999816894531" text="Data achitării" />
+                              <TableColumn fx:id="Achitare_nr_bon" prefWidth="190.20001220703125" text="Număr bon" />
+                              <TableColumn fx:id="Achitare_pret" prefWidth="38.79998779296875" text="Preț" />
+                              <TableColumn fx:id="Achitare_fin" prefWidth="346.800048828125" text="Data finalizării sesiunii" />
+                          </columns>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#OnAdd" text="Adaugă achitare" />
+                                        <MenuItem mnemonicParsing="false" onAction="#OnEdit" text="Modifică achitarea" />
+                                        <MenuItem mnemonicParsing="false" onAction="#OnDelete" text="Șterge achitarea" />
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                     </children></AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Sala de Gaming &quot;Winners&quot;" textAlignment="CENTER" textOrigin="TOP" x="350.0">
+         <font>
+            <Font name="Bauhaus 93" size="48.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="0.5190839913055187" endY="0.46564881128209235" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5251908396946563">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Text>
+      <AnchorPane fx:id="popUpJucator" disable="true" layoutX="400.0" layoutY="400.0" prefHeight="150.0" prefWidth="202.0" style="-fx-background-color: &quot;BLUE&quot;;" visible="false">
+         <children>
+            <TextField fx:id="FJucator_nume" layoutX="4.0" layoutY="5.0" prefHeight="26.0" prefWidth="194.0" promptText="Nume" />
+            <Button layoutX="141.0" layoutY="115.0" mnemonicParsing="false" onAction="#OnOK" style="-fx-background-color: &quot;lime&quot;;" text="OK" />
+            <Button layoutX="25.0" layoutY="115.0" mnemonicParsing="false" onAction="#OnCancel" style="-fx-background-color: &quot;RED&quot;;" text="Anulează" />
+            <TextField fx:id="FJucator_nr_card" layoutX="4.0" layoutY="45.0" prefHeight="26.0" prefWidth="194.0" promptText="Numar card" />
+            <TextField fx:id="FJucator_nume_echipa" layoutX="4.0" layoutY="85.0" prefHeight="26.0" prefWidth="194.0" promptText="Nume echipa" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="popUpDetails" disable="true" layoutX="410.0" layoutY="410.0" prefHeight="202.0" prefWidth="202.0" style="-fx-background-color: &quot;BLUE&quot;;" visible="false">
+         <children>
+            <Button layoutX="155.0" layoutY="167.0" mnemonicParsing="false" onAction="#OnOK" style="-fx-background-color: &quot;lime&quot;;" text="OK" />
+            <Button layoutX="14.0" layoutY="167.0" mnemonicParsing="false" onAction="#OnCancel" style="-fx-background-color: &quot;RED&quot;;" text="Anulează" />
+            <TextField fx:id="FDetails_email" layoutX="4.0" layoutY="45.0" prefHeight="26.0" prefWidth="194.0" promptText="E-mail" />
+            <TextField fx:id="FDetails_birth" layoutX="4.0" layoutY="85.0" prefHeight="26.0" prefWidth="194.0" promptText="Data nașterii(YYYY-MM-DD)" />
+            <TextField fx:id="FDetails_gen" layoutX="4.0" layoutY="125.0" prefHeight="26.0" prefWidth="194.0" promptText="Gen(M/F)" />
+            <ComboBox fx:id="FDetails_nr_card" layoutX="4.0" layoutY="5.0" prefHeight="26.0" prefWidth="194.0" promptText="Număr card" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="popUpTipuri" disable="true" layoutX="420.0" layoutY="420.0" prefHeight="126.0" prefWidth="202.0" style="-fx-background-color: &quot;BLUE&quot;;" visible="false">
+         <children>
+            <TextField fx:id="FTip_denumire" layoutX="4.0" layoutY="5.0" prefHeight="26.0" prefWidth="194.0" promptText="Denumire Tip" />
+            <Button layoutX="135.0" layoutY="89.0" mnemonicParsing="false" onAction="#OnOK" style="-fx-background-color: &quot;lime&quot;;" text="OK" />
+            <Button layoutX="23.0" layoutY="89.0" mnemonicParsing="false" onAction="#OnCancel" style="-fx-background-color: &quot;RED&quot;;" text="Anulează" />
+            <TextField fx:id="FTip_id" layoutX="4.0" layoutY="45.0" prefHeight="26.0" prefWidth="194.0" promptText="ID(0 sau lăsat liber=autoincrement)" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="popUpSesiuni" disable="true" layoutX="430.0" layoutY="430.0" prefHeight="150.0" prefWidth="202.0" style="-fx-background-color: &quot;BLUE&quot;;" visible="false">
+         <children>
+            <ComboBox fx:id="FSesiune_id_tip" layoutX="4.0" layoutY="85.0" prefHeight="26.0" prefWidth="194.0" promptText="ID tip de joc" />
+            <TextField fx:id="FSesiune_nume_joc" layoutX="4.0" layoutY="5.0" prefHeight="26.0" prefWidth="194.0" promptText="Numele Jocului" />
+            <Button layoutX="141.0" layoutY="115.0" mnemonicParsing="false" onAction="#OnOK" style="-fx-background-color: &quot;lime&quot;;" text="OK" />
+            <Button layoutX="25.0" layoutY="115.0" mnemonicParsing="false" onAction="#OnCancel" style="-fx-background-color: &quot;RED&quot;;" text="Anulează" />
+            <TextField fx:id="FSesiune_id" layoutX="4.0" layoutY="45.0" prefHeight="26.0" prefWidth="194.0" promptText="ID sesiune(0 sau lăsat liber=autoincrement)" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="popUpAchitari" disable="true" layoutX="440.0" layoutY="440.0" prefHeight="274.0" prefWidth="299.0" style="-fx-background-color: &quot;BLUE&quot;;" visible="false">
+         <children>
+            <ComboBox fx:id="FAchitare_id_sesiune" layoutX="4.0" layoutY="45.0" prefHeight="26.0" prefWidth="290.0" promptText="ID sesiune" />
+            <Button layoutX="223.0" layoutY="234.0" mnemonicParsing="false" onAction="#OnOK" style="-fx-background-color: &quot;lime&quot;;" text="OK" />
+            <Button layoutX="52.0" layoutY="234.0" mnemonicParsing="false" onAction="#OnCancel" style="-fx-background-color: &quot;RED&quot;;" text="Anulează" />
+            <TextField fx:id="FAchitare_dataAq" layoutX="4.0" layoutY="85.0" prefHeight="26.0" prefWidth="290.0" promptText="Data achitării(yyyy-mm-dd hh:mm:ss)" />
+            <TextField fx:id="FAchitare_nrbon" layoutX="4.0" layoutY="125.0" prefHeight="26.0" prefWidth="290.0" promptText="Număr bon(pentru autoincrement,0 sau spatiu liber)" />
+            <TextField fx:id="FAchitare_dataFin" layoutX="4.0" layoutY="205.0" prefHeight="26.0" prefWidth="290.0" promptText="Data finalizării(yyyy-mm-dd hh:mm:ss)" />
+            <ComboBox fx:id="FAchitare_nr_card" layoutX="4.0" layoutY="5.0" prefHeight="26.0" prefWidth="290.0" promptText="Număr card" />
+            <ComboBox fx:id="FAchitare_pret" layoutX="4.0" layoutY="165.0" prefHeight="26.0" prefWidth="290.0" promptText="Preț" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="1140.0" layoutY="62.0" mnemonicParsing="false" onAction="#OnCommit" style="-fx-background-color: &quot;CYAN&quot;;" text="Commit">
+         <opaqueInsets>
+            <Insets bottom="40.0" />
+         </opaqueInsets></Button>
+      <Button layoutX="1075.0" layoutY="62.0" mnemonicParsing="false" onAction="#OnRollback" style="-fx-background-color: &quot;YELLOW&quot;;" text="Rollback">
+         <font>
+            <Font name="Microsoft Tai Le" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="1000.0" layoutY="62.0" mnemonicParsing="false" onAction="#OnTimePlayed" text="Timp jucat" />
+      <Button fx:id="clearButton" disable="true" layoutX="895.0" layoutY="62.0" mnemonicParsing="false" onAction="#OnClear" style="-fx-background-color: &quot;WHITE&quot;;" text="Curăță achitările" visible="false" />
+      <AnchorPane fx:id="TimePlayedAnchor" disable="true" layoutX="500.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <ListView fx:id="PlayedTimeList" prefHeight="200.0" prefWidth="281.0" />
+            <Button layoutX="258.0" layoutY="-27.0" mnemonicParsing="false" onAction="#OnClose" prefHeight="3.0" prefWidth="23.0" style="-fx-background-color: &quot;RED&quot;;" text="X" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

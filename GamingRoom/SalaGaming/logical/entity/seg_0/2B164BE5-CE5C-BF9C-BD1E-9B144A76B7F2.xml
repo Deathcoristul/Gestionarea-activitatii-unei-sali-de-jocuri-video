@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B164BE5-CE5C-BF9C-BD1E-9B144A76B7F2" name="Detalii jucator">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 20:02:43 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Email" id="E1250A70-52A2-2F6A-51EC-F71F62D2471F">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 20:02:56 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<constraintName>email_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(Email, &apos;[a-z0-9._%-]+@[a-z0-9._%-]+\.[a-z]{2,4}&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data nasterii" id="84623511-2B24-AC47-9DEF-4135A0CA1483">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 20:03:07 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<constraintName>birthdate_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>to_date(&apos;01.01.1950&apos;, &apos;DD.MM.YYYY&apos;)</beginValue>
+<endValue>to_date(&apos;01.01.2013&apos;, &apos;DD.MM.YYYY&apos;)</endValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="Gen" id="EF5F2CFC-CF13-621A-519D-C8314E39723E">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-20 20:03:37 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<constraintName>gen_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="F" description="Female"/>
+<valueDef value="M" description="Male"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Jucator Nr card" id="61332122-891F-EDB8-9879-D967AE5A079F">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-24 17:28:10 UTC</createdTime>
+<generatorID>2C346E07-3EC0-7446-89E7-87D193B7EC9C</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<referedAttribute>146F6638-61BB-DBDE-5614-6B9FFACAC495</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<ownDataTypeParameters>,12,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AB9F6390-FC6D-ADBD-F0FF-8C0AD04F649F" name="Detalii_jucator_Jucator_Nr_card_UN">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-30 15:07:34 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>61332122-891F-EDB8-9879-D967AE5A079F</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="5338E807-DC13-4BD7-DDA4-D9CCDAC37851" name="Detalii jucator PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-01 20:24:06 UTC</createdTime>
+<generatorID>575D1E0E-97DC-B67A-B4D5-5A3BBD096862</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>61332122-891F-EDB8-9879-D967AE5A079F</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="DB441CC0-C711-DC55-7371-DCC881341C00" name="Detalii_jucator_Email_UN">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-01 20:24:47 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<newElementsIDs>E1250A70-52A2-2F6A-51EC-F71F62D2471F</newElementsIDs>
+<usedAttributes>
+<attributeRef>E1250A70-52A2-2F6A-51EC-F71F62D2471F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

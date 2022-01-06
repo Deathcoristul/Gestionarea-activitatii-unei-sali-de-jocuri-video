@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Achitare" directorySegmentName="seg_0" id="002AF7C0-3BA2-91AE-A217-FB4FEFF2FFD1">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-10-21 14:40:17 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>Un jucător poate achita mai multe sesiuni.</nameOnSource>
+<nameOnTarget>O sesiune poate fi achitată de mai mulți jucători.</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>F56FDF59-84CB-9F24-079C-B37C90F1553F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>50E82AE5-030A-4FD0-A133-EE88C10C48C7</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="Nr_bon" id="84CBCE29-C09F-0777-86A5-6A5550C01FC8">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-18 15:01:19 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="Pret" id="D0E2A53D-92C9-04D2-3671-05FDECC33F8F">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-18 14:58:03 UTC</createdTime>
+<generatorID>FE8BAC49-BA94-FDA4-8DAC-D2683DCBF2CC</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<constraintName>Pret_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<listOfValues>
+<valueDef value="10" description=""/>
+<valueDef value="5" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</attribute>
+<attribute name="Data finalizare" id="EFF3C4F6-6400-10F9-0D1C-C91F13C0AE49">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-18 14:58:03 UTC</createdTime>
+<generatorID>D23E5AF5-3EF6-571F-3A29-DE29848036D0</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<constraintName>finish_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="Data_finalizare=Data_achitarii+Pret/120"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="ID sesiune" id="D542BF60-EE13-9D2F-36D2-0D4D324BA8D6">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-11-30 15:07:34 UTC</createdTime>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<engineerTo>
+<item key="0C0CF6D8-933A-FE09-3AE6-5C244163630B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4B15E9B0-6EF4-2081-76A7-F0C2B3C39BD0" containerWithKeyObject="9668122A-512A-8A16-FC48-DDC6C7A2E629" localFKIndex="8162C22B-48D8-BE08-3213-66B1679D83A2" name="Sesiune_gaming_Tip_Joc_FK">
+<createdBy>Stefan</createdBy>
+<createdTime>2021-12-28 09:59:26 UTC</createdTime>
+<generatorID>BCD3E350-BDA3-EEFA-E8AC-20B48C7CD99B</generatorID>
+<ownerDesignName>SalaGaming</ownerDesignName>
+<referredTableLongName>Tip_Joc</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B5275FD0-01B9-E3D5-09D5-5415ADAEE15A</referredTableID>
+<keyObject>9FADD902-D8B9-2E43-DC00-F30FED13BB9D</keyObject>
+<referredKeyID>9FADD902-D8B9-2E43-DC00-F30FED13BB9D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_tip</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

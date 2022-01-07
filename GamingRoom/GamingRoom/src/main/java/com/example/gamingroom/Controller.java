@@ -158,7 +158,7 @@ public class Controller implements Initializable {//Pentru a ne fi mai usor cu a
             tabelSesiuni.setItems(sesiuneJocSQL.Select());
             FAchitare_id_sesiune.setItems(sesiuneJocSQL.SelectSessions());
             tabelAchitari.setItems(achitareSQL.Select());
-            PlayedTimeList.setItems(achitareSQL.HoursPlayed());
+            PlayedTimeList.setItems(achitareSQL.HoursPlayed());//inseram in fereastra lista cu detalii despre timpul jucat de fiecare jucator
         }
         catch (SQLException e)
         {
@@ -174,12 +174,12 @@ public class Controller implements Initializable {//Pentru a ne fi mai usor cu a
     }
     public void OnAdd(ActionEvent actionEvent) {
         adding=true;
-        PopUp(currpopUp,true);
+        PopUp(true);
     }
 
     public void OnEdit(ActionEvent actionEvent) {
         adding=false;
-        PopUp(currpopUp,true);
+        PopUp(true);
     }
 
     public void OnDelete(ActionEvent actionEvent) {
@@ -241,7 +241,7 @@ public class Controller implements Initializable {//Pentru a ne fi mai usor cu a
         clearButton.setDisable(false);
         clearButton.setVisible(true);
     }
-    public void PopUp(AnchorPane a,boolean b){
+    public void PopUp(boolean b){
         if(b && !adding && currTable.getSelectionModel().getSelectedItem() == null) {
             showMessageDialog(null, "Nu a fost selectat niciun rand");
             return;
@@ -276,15 +276,15 @@ public class Controller implements Initializable {//Pentru a ne fi mai usor cu a
                 Achitare aq=(Achitare) currTable.getSelectionModel().getSelectedItem();
                 FAchitare_nr_card.setValue(String.valueOf(aq.getNr_card()));
                 FAchitare_id_sesiune.setValue(String.valueOf(aq.getId_sesiune()));
-                FAchitare_dataAq.setText(aq.getData_achitarii().substring(0,aq.getData_achitarii().length()-2));
+                FAchitare_dataAq.setText(aq.getData_achitarii().substring(0,aq.getData_achitarii().length()-2));//substring ca sa nu mai lucram si cum milisecundele
                 FAchitare_nrbon.setText(String.valueOf(aq.getNr_bon()));
                 FAchitare_pret.setValue(String.valueOf(aq.getPret()));
                 FAchitare_dataFin.setText(aq.getData_finalizare().substring(0,aq.getData_finalizare().length()-2));
             }
         }
         tabPane.setDisable(b);//sa nu mai umblam la fereastra principala cat timp inseram/editam
-        a.setVisible(b);
-        a.setDisable(!b);
+        currpopUp.setVisible(b);
+        currpopUp.setDisable(!b);
     }
 
     public void OnOK(ActionEvent actionEvent) {
@@ -294,13 +294,13 @@ public class Controller implements Initializable {//Pentru a ne fi mai usor cu a
 
                 if (currTable.equals(tabelJucator)) {
                     Jucator juc=new Jucator(FJucator_nume.getText(),
-                            Integer.parseInt(FJucator_nr_card.getText()),
+                            Integer.parseInt(FJucator_nr_card.getText()),//convertim in intreg, pentru ca valoarea preluata din field e string
                             FJucator_nume_echipa.getText());
                     jucatorSQL.Insert(juc);//apelam conexiunea si inseram
                 }
                 else if (currTable.equals(tabelDetails)) {
                     DetaliiJucator dej= new DetaliiJucator(
-                            Integer.parseInt(String.valueOf(FDetails_nr_card.getValue())),
+                            Integer.parseInt(String.valueOf(FDetails_nr_card.getValue())),//convertim in string, apoi in intreg, valoarea din combobox e Object
                             FDetails_email.getText(),
                             FDetails_birth.getText(),
                             FDetails_gen.getText()
@@ -325,7 +325,7 @@ public class Controller implements Initializable {//Pentru a ne fi mai usor cu a
                     {
                         sj=new SesiuneJoc(
                                 FSesiune_nume_joc.getText(),
-                                0,
+                                0,//0 va fi pentru autoincrement
                                 Integer.parseInt(String.valueOf(FSesiune_id_tip.getValue())));
                     }
                     else
@@ -335,7 +335,7 @@ public class Controller implements Initializable {//Pentru a ne fi mai usor cu a
                             Integer.parseInt(FSesiune_id.getText()),
                             Integer.parseInt(String.valueOf(FSesiune_id_tip.getValue())));
                     }
-                    sesiuneJocSQL.Insert(sj);
+                    sesiuneJocSQL.Insert(sj);//inseram
                 }
                 else if (currTable.equals(tabelAchitari)) {
                     Achitare aq;
@@ -369,7 +369,7 @@ public class Controller implements Initializable {//Pentru a ne fi mai usor cu a
                                 FAchitare_dataAq.getText(),
                                 x,
                                 Integer.parseInt(String.valueOf(FAchitare_pret.getValue())),
-                                "0001-01-01 00:00:00.0"
+                                "0001-01-01 00:00:00.0"//acest va fi de fapt SYSDATE in SQL
                         );
                     else
                         aq=new Achitare(
@@ -516,11 +516,11 @@ public class Controller implements Initializable {//Pentru a ne fi mai usor cu a
                 return;
             }
         }
-        PopUp(currpopUp,false);
+        PopUp(false);
     }
     public void OnCancel(ActionEvent actionEvent) {
-        clearFields();
-        PopUp(currpopUp,false);
+        clearFields();//pentru ca la urmatorul add sa nu ramana valorile de la randul selectat anterior
+        PopUp(false);
     }
     public void clearFields()
     {
@@ -547,7 +547,7 @@ public class Controller implements Initializable {//Pentru a ne fi mai usor cu a
     }
 
     public void OnRollback(ActionEvent actionEvent) throws SQLException {
-        SQLConnection.rollback();
+        SQLConnection.rollback();//pentru rollback inseram valorile care erau initial la apasarea butonului de commit
         tabelJucator.setItems(jucatorSQL.Select());
         FDetails_nr_card.setItems(jucatorSQL.SelectCards());//Inseram in comboboxul popup-ului valorile din coloana nr_card din Jucator
         FAchitare_nr_card.setItems(jucatorSQL.SelectCards());
@@ -571,7 +571,7 @@ public class Controller implements Initializable {//Pentru a ne fi mai usor cu a
         }
     }
 
-    public void OnClear(ActionEvent actionEvent){
+    public void OnClear(ActionEvent actionEvent){//pentru a curata achitarile a caror timp s-a scurs
         try {
             achitareSQL.TimeExpiredDelete();
             tabelAchitari.setItems(achitareSQL.Select());

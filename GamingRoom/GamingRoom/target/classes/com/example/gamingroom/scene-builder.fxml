@@ -214,9 +214,9 @@
       </Button>
       <Button layoutX="1000.0" layoutY="62.0" mnemonicParsing="false" onAction="#OnTimePlayed" text="Timp jucat" />
       <Button fx:id="clearButton" disable="true" layoutX="895.0" layoutY="62.0" mnemonicParsing="false" onAction="#OnClear" style="-fx-background-color: &quot;WHITE&quot;;" text="Curăță achitările" visible="false" />
-      <AnchorPane fx:id="TimePlayedAnchor" disable="true" layoutX="500.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+      <AnchorPane fx:id="TimePlayedAnchor" disable="true" layoutX="500.0" layoutY="200.0" prefHeight="250.0" prefWidth="282.0" visible="false">
          <children>
-            <ListView fx:id="PlayedTimeList" prefHeight="200.0" prefWidth="281.0" />
+            <ListView fx:id="PlayedTimeList" prefHeight="250.0" prefWidth="282.0" />
             <Button layoutX="258.0" layoutY="-27.0" mnemonicParsing="false" onAction="#OnClose" prefHeight="3.0" prefWidth="23.0" style="-fx-background-color: &quot;RED&quot;;" text="X" />
          </children>
       </AnchorPane>

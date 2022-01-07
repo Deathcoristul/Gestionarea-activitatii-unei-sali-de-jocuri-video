@@ -27,7 +27,7 @@ public class DetaliiJucatorSQL extends SQLConnection<DetaliiJucator> {
             query+="NULL)";
         else
             query+="'"+Obj.getGen()+"')";
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
 
     @Override
@@ -42,19 +42,19 @@ public class DetaliiJucatorSQL extends SQLConnection<DetaliiJucator> {
             query+="NULL WHERE nr_card="+WhereObj.getNr_card();
         else
             query+="'"+Obj.getGen()+"' WHERE nr_card="+WhereObj.getNr_card();
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
 
     @Override
     public void Delete(DetaliiJucator Obj) throws SQLException {
         String query="DELETE FROM DETALII_JUCATOR WHERE nr_card="+Obj.getNr_card();
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
 
     @Override
     public ObservableList<DetaliiJucator> Select() throws SQLException {
         ObservableList<DetaliiJucator> list = FXCollections.observableArrayList();
-        ResultSet rs=stm.executeQuery("SELECT "+getColumns()+" FROM detalii_jucator");
+        ResultSet rs=stmt.executeQuery("SELECT "+getColumns()+" FROM detalii_jucator");
         while(rs.next())
         {
             list.add(new DetaliiJucator(rs.getInt(1),rs.getString(2),rs.getDate(3),rs.getString(4)));

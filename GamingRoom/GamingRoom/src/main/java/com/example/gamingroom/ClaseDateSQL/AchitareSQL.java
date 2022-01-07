@@ -40,7 +40,7 @@ public class AchitareSQL extends SQLConnection<Achitare> {
             showMessageDialog(null, "Dacă introduceți data de finalizare, introduceți și data de achitare!!!");
             return;
         }
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
     @Override
     public void Update(Achitare WhereObj, Achitare Obj) throws SQLException {
@@ -68,17 +68,17 @@ public class AchitareSQL extends SQLConnection<Achitare> {
             showMessageDialog(null, "Dacă introduceți data de finalizare, introduceți și data de achitare!!!");
             return;
         }
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
     @Override
     public void Delete(Achitare Obj) throws SQLException {
         String query="DELETE FROM achitare WHERE nr_bon="+Obj.getNr_bon();
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
     @Override
     public ObservableList<Achitare> Select() throws SQLException {
         ObservableList<Achitare> list = FXCollections.observableArrayList();
-        ResultSet rs=stm.executeQuery("SELECT "+getColumns()+" FROM achitare");
+        ResultSet rs=stmt.executeQuery("SELECT "+getColumns()+" FROM achitare");
         while(rs.next())
         {
             list.add(new Achitare(rs.getInt(1),rs.getInt(2),rs.getTimestamp(3),rs.getInt(4),rs.getInt(5),rs.getTimestamp(6)));
@@ -86,7 +86,7 @@ public class AchitareSQL extends SQLConnection<Achitare> {
         return list;
     }
     public void TimeExpiredDelete() throws SQLException {
-        stm.executeUpdate("DELETE FROM achitare WHERE SYSDATE> data_finalizare");
+        stmt.executeUpdate("DELETE FROM achitare WHERE SYSDATE> data_finalizare");
     }
     public ObservableList<String> HoursPlayed() throws SQLException {
         ObservableList<String> list = FXCollections.observableArrayList();
@@ -94,7 +94,7 @@ public class AchitareSQL extends SQLConnection<Achitare> {
                 "FROM (SELECT  (sysdate - data_achitarii) * 24 * 60 AS minutes_,nume,denumire_joc " +
                 "FROM  achitare,jucator,sesiune_gaming " +
                 "WHERE jucator.nr_card=achitare.nr_card and sesiune_gaming.id_sesiune=achitare.id_sesiune)";
-        ResultSet rs=stm.executeQuery(query);
+        ResultSet rs=stmt.executeQuery(query);
         while(rs.next())
         {
             list.add(rs.getString(1));

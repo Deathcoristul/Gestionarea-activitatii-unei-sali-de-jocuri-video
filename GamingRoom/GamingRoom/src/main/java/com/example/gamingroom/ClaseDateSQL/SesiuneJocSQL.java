@@ -22,7 +22,7 @@ public class SesiuneJocSQL extends SQLConnection<SesiuneJoc> {
             query+=Obj.getId_sesiune()+","+Obj.getId_tip()+")";
         else
             query+="SESIUNE_GAMING_ID_SESIUNE_SEQ.nextval,"+Obj.getId_tip()+")";
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
 
     @Override
@@ -33,19 +33,19 @@ public class SesiuneJocSQL extends SQLConnection<SesiuneJoc> {
         else
             query+="SESIUNE_GAMING_ID_SESIUNE_SEQ.nextval, id_tip="+Obj.getId_tip()+" WHERE id_sesiune="+WhereObj.getId_sesiune();
         System.out.println(query);
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
 
     @Override
     public void Delete(SesiuneJoc Obj) throws SQLException {
         String query="DELETE FROM sesiune_gaming WHERE id_sesiune="+Obj.getId_sesiune();
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
 
     @Override
     public ObservableList<SesiuneJoc> Select() throws SQLException {
         ObservableList<SesiuneJoc> list = FXCollections.observableArrayList();
-        ResultSet rs=stm.executeQuery("SELECT "+getColumns()+" FROM sesiune_gaming");
+        ResultSet rs=stmt.executeQuery("SELECT "+getColumns()+" FROM sesiune_gaming");
         while(rs.next())
         {
             list.add(new SesiuneJoc(rs.getString(1),rs.getInt(2),rs.getInt(3)));
@@ -54,7 +54,7 @@ public class SesiuneJocSQL extends SQLConnection<SesiuneJoc> {
     }
     public ObservableList<Integer> SelectSessions() throws SQLException {
         ObservableList<Integer> list = FXCollections.observableArrayList();
-        ResultSet rs=stm.executeQuery("SELECT id_sesiune FROM sesiune_gaming");
+        ResultSet rs=stmt.executeQuery("SELECT id_sesiune FROM sesiune_gaming");
         while(rs.next())
         {
             list.add(rs.getInt(1));

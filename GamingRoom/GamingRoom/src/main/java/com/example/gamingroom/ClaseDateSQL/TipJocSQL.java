@@ -22,7 +22,7 @@ public class TipJocSQL extends SQLConnection<TipJoc> {
             query+=Obj.getId_tip()+")";
         else
             query+="TIP_JOC_ID_TIP_SEQ.nextval)";
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
 
     @Override
@@ -32,19 +32,19 @@ public class TipJocSQL extends SQLConnection<TipJoc> {
             query+=Obj.getId_tip()+ " WHERE id_tip="+WhereObj.getId_tip();
         else
             query+="TIP_JOC_ID_TIP_SEQ.nextval WHERE id_tip="+WhereObj.getId_tip();
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
 
     @Override
     public void Delete(TipJoc Obj) throws SQLException {
         String query="DELETE FROM tip_joc WHERE id_tip="+Obj.getId_tip();
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
 
     @Override
     public ObservableList<TipJoc> Select() throws SQLException {
         ObservableList<TipJoc> list = FXCollections.observableArrayList();
-        ResultSet rs=stm.executeQuery("SELECT "+getColumns()+" FROM tip_joc");
+        ResultSet rs=stmt.executeQuery("SELECT "+getColumns()+" FROM tip_joc");
         while(rs.next())
         {
             list.add(new TipJoc(rs.getString(1),rs.getInt(2)));
@@ -53,7 +53,7 @@ public class TipJocSQL extends SQLConnection<TipJoc> {
     }
     public ObservableList<Integer> Selecttypes() throws SQLException {
         ObservableList<Integer> list = FXCollections.observableArrayList();
-        ResultSet rs=stm.executeQuery("SELECT id_tip FROM tip_joc");
+        ResultSet rs=stmt.executeQuery("SELECT id_tip FROM tip_joc");
         while(rs.next())
         {
             list.add(rs.getInt(1));

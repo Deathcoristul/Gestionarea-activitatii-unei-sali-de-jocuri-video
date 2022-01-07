@@ -16,23 +16,23 @@
 <objectViews>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="06909ED1-3237-8C73-750F-6A7D27158201" otype="Table" vid="6C0E3DCF-78CC-3A50-BD93-F28D234D08AB">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="350" y="30" width="206" height="87"/>
+<bounds x="373" y="40" width="206" height="87"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="2053FC8C-48E3-632E-E2E2-DE5961108715" otype="Table" vid="53D27A23-2CAC-F729-2402-CFE7CA1433CD">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="624" y="161" width="303" height="176"/>
+<bounds x="358" y="234" width="303" height="176"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="8EA54261-2BC8-562C-ACC1-D21ED12FF629" otype="Table" vid="EB76E5E4-63E2-033B-BFDA-419BB1CA34E8">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="5" y="25" width="289" height="155"/>
+<bounds x="5" y="25" width="208" height="155"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="9668122A-512A-8A16-FC48-DDC6C7A2E629" otype="Table" vid="FEC17089-8912-B61A-5F46-7CE06114D0B6">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="1013" y="394" width="232" height="121"/>
+<bounds x="426" y="510" width="206" height="121"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="B5275FD0-01B9-E3D5-09D5-5415ADAEE15A" otype="Table" vid="DEAA6066-EABD-FB20-3A01-B82B7A189DF2">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="1020" y="30" width="211" height="79"/>
+<bounds x="0" y="531" width="201" height="79"/>
 </OView>
 </objectViews>
 <connectors>
@@ -42,13 +42,13 @@
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="1" y="56" width="147" height="142"/>
+<labelBounds x="1" y="2" width="147" height="38"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
 <points>
-<point x="350" y="73"/>
-<point x="294" y="73"/>
+<point x="373" y="83"/>
+<point x="213" y="83"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="4B15E9B0-6EF4-2081-76A7-F0C2B3C39BD0" otype="FKIndexAssociation" vid_source="DEAA6066-EABD-FB20-3A01-B82B7A189DF2" vid_target="FEC17089-8912-B61A-5F46-7CE06114D0B6">
@@ -57,13 +57,13 @@
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-317" y="-61" width="159" height="30"/>
+<labelBounds x="0" y="27" width="159" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
 <points>
-<point x="1125" y="109"/>
-<point x="1125" y="394"/>
+<point x="201" y="570"/>
+<point x="426" y="570"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="66C08243-AA9B-D058-53F8-8CEDE0CB2933" otype="FKIndexAssociation" vid_source="FEC17089-8912-B61A-5F46-7CE06114D0B6" vid_target="53D27A23-2CAC-F729-2402-CFE7CA1433CD">
@@ -72,13 +72,13 @@
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="-241" y="-46" width="160" height="30"/>
+<labelBounds x="28" y="51" width="298" height="30"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
 <points>
-<point x="1043" y="394"/>
-<point x="926" y="337"/>
+<point x="529" y="510"/>
+<point x="529" y="410"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="C7CD0BB3-8C92-A71A-2CFF-AD839AC2F408" otype="FKIndexAssociation" vid_source="6C0E3DCF-78CC-3A50-BD93-F28D234D08AB" vid_target="53D27A23-2CAC-F729-2402-CFE7CA1433CD">
@@ -87,13 +87,13 @@
 <lineWidth>1</lineWidth>
 <centerLabel class="oracle.dbtools.crest.model.design.Label">
 <site>1</site>
-<labelBounds x="104" y="0" width="319" height="30"/>
+<labelBounds x="226" y="8" width="221" height="32"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </centerLabel>
 <points>
-<point x="532" y="117"/>
-<point x="624" y="166"/>
+<point x="476" y="127"/>
+<point x="476" y="234"/>
 </points>
 </Connector>
 </connectors>

@@ -21,7 +21,7 @@ public class JucatorSQL extends SQLConnection<Jucator> {
             query+="NULL)";
         else
             query+="'"+Obj.getNume_echipa()+"')";
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
     @Override
     public void Update(Jucator WhereObj, Jucator Obj) throws SQLException {
@@ -30,18 +30,18 @@ public class JucatorSQL extends SQLConnection<Jucator> {
             query+="NULL WHERE nr_card="+WhereObj.getNr_card();
         else
             query+="'"+Obj.getNume_echipa()+"' WHERE nr_card="+WhereObj.getNr_card();
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
     @Override
     public void Delete(Jucator Obj) throws SQLException {
         String query="DELETE FROM JUCATOR WHERE nr_card="+Obj.getNr_card();
-        stm.executeUpdate(query);
+        stmt.executeUpdate(query);
     }
     @Override
     public ObservableList<Jucator> Select() throws SQLException {
         ObservableList<Jucator> list = FXCollections.observableArrayList();
         //Nu merge cu new ObservableList()
-        ResultSet rs=stm.executeQuery("SELECT "+getColumns()+" FROM JUCATOR");
+        ResultSet rs=stmt.executeQuery("SELECT "+getColumns()+" FROM JUCATOR");
         while(rs.next())
         {
             list.add(new Jucator(rs.getString(1),rs.getInt(2),rs.getString(3)));
@@ -51,7 +51,7 @@ public class JucatorSQL extends SQLConnection<Jucator> {
     public ObservableList<Integer> SelectCards() throws SQLException {
         ObservableList<Integer> list = FXCollections.observableArrayList();
         //Nu merge cu new ObservableList()
-        ResultSet rs=stm.executeQuery("SELECT nr_card FROM JUCATOR");
+        ResultSet rs=stmt.executeQuery("SELECT nr_card FROM JUCATOR");
         while(rs.next())
         {
             list.add(rs.getInt(1));

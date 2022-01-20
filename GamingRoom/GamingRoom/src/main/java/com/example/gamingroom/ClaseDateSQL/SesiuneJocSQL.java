@@ -32,7 +32,6 @@ public class SesiuneJocSQL extends SQLConnection<SesiuneJoc> {
             query+=Obj.getId_sesiune()+ ", id_tip="+Obj.getId_tip()+" WHERE id_sesiune="+WhereObj.getId_sesiune();
         else
             query+="SESIUNE_GAMING_ID_SESIUNE_SEQ.nextval, id_tip="+Obj.getId_tip()+" WHERE id_sesiune="+WhereObj.getId_sesiune();
-        System.out.println(query);
         stmt.executeUpdate(query);
     }
 

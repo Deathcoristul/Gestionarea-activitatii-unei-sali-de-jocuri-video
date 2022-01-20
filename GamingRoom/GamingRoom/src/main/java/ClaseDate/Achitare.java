@@ -21,7 +21,7 @@ public class Achitare {
     }
     public Achitare(int nr_card, int id_sesiune, String data_achitarii, int nr_bon, int pret, Timestamp data_finalizare) {
         this(nr_card,id_sesiune,nr_bon,pret);
-        this.data_achitarii = Timestamp.valueOf(data_achitarii);
+        this.data_achitarii = Timestamp.valueOf(data_achitarii);//convertim string-ul in TimeStamp
         this.data_finalizare = data_finalizare;
     }
     public Achitare(int nr_card, int id_sesiune, Timestamp data_achitarii, int nr_bon, int pret, String data_finalizare) {
